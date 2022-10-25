@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import abc
-import json
 import datetime
-import logging
 import hashlib
+import json
+import logging
 import uuid
-from optparse import OptionParser
-from http.server import BaseHTTPRequestHandler, HTTPServer
 from http import HTTPStatus
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from optparse import OptionParser
+
 from config import Config
 from parse_request import ParseRequest
 
@@ -50,7 +50,7 @@ class MainHTTPHandler(BaseHTTPRequestHandler):
         try:
             data_string = self.rfile.read(int(self.headers['Content-Length']))
             request = json.loads(data_string)
-        except:
+        except Exception:
             code = HTTPStatus.BAD_REQUEST
 
         if request:

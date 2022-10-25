@@ -1,10 +1,10 @@
-import hashlib
 import datetime
 import functools
+import hashlib
 import unittest
+from http import HTTPStatus
 
 import api
-from http import HTTPStatus
 from config import Config
 
 
@@ -46,9 +46,12 @@ class TestSuite(unittest.TestCase):
         self.assertEqual(HTTPStatus.UNPROCESSABLE_ENTITY, code)
 
     @cases([
-        {"account": "horns&hoofs", "login": "h&f", "method": "online_score", "token": "", "arguments": {}},
-        {"account": "horns&hoofs", "login": "h&f", "method": "online_score", "token": "sdd", "arguments": {}},
-        {"account": "horns&hoofs", "login": "admin", "method": "online_score", "token": "", "arguments": {}},
+        {"account": "horns&hoofs", "login": "h&f", "method": "online_score",
+         "token": "", "arguments": {}},
+        {"account": "horns&hoofs", "login": "h&f", "method": "online_score",
+         "token": "sdd", "arguments": {}},
+        {"account": "horns&hoofs", "login": "admin", "method": "online_score",
+         "token": "", "arguments": {}},
     ])
     def test_bad_auth(self, request):
         _, code = self.get_response(request)
@@ -72,10 +75,14 @@ class TestSuite(unittest.TestCase):
         {"phone": "79175002040", "email": "stupnikovotus.ru"},
         {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": -1},
         {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": "1"},
-        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1, "birthday": "01.01.1890"},
-        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1, "birthday": "XXX"},
-        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1, "birthday": "01.01.2000", "first_name": 1},
-        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1, "birthday": "01.01.2000",
+        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1,
+         "birthday": "01.01.1890"},
+        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1,
+         "birthday": "XXX"},
+        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1,
+         "birthday": "01.01.2000", "first_name": 1},
+        {"phone": "79175002040", "email": "stupnikov@otus.ru", "gender": 1,
+         "birthday": "01.01.2000",
          "first_name": "s", "last_name": 2},
         {"phone": "79175002040", "birthday": "01.01.2000", "first_name": "s"},
         {"email": "stupnikov@otus.ru", "gender": 1, "last_name": 2},
@@ -91,7 +98,8 @@ class TestSuite(unittest.TestCase):
     @cases([
         {"phone": "79175002040", "email": "stupnikov@otus.ru"},
         {"phone": 79175002040, "email": "stupnikov@otus.ru"},
-        {"gender": 1, "birthday": "01.01.2000", "first_name": "a", "last_name": "b"},
+        {"gender": 1, "birthday": "01.01.2000", "first_name": "a",
+         "last_name": "b"},
         {"gender": 0, "birthday": "01.01.2000"},
         {"gender": 2, "birthday": "01.01.2000"},
         {"first_name": "a", "last_name": "b"},

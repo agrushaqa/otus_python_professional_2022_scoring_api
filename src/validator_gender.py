@@ -7,4 +7,3 @@ class ValidatorGender:
             raise ValueError(f"{self.value} more then 2")
         if not isinstance(self.value, int):
             raise ValueError(f"{self.value} type is {type(self.value)}")
-

@@ -16,5 +16,6 @@ def get_score(store, phone, email, birthday=None, gender=None, first_name=None,
 
 
 def get_interests(store, cid):
-    interests = ["cars", "pets", "travel", "hi-tech", "sport", "music", "books", "tv", "cinema", "geek", "otus"]
+    interests = ["cars", "pets", "travel", "hi-tech", "sport", "music",
+                 "books", "tv", "cinema", "geek", "otus"]
     return random.sample(interests, 2)

@@ -1,9 +1,11 @@
 import datetime
 import os
 import sys
-script_dir = os.path.dirname( __file__ )
-sys.path.append(script_dir)
+
 from config import Config
+
+script_dir = os.path.dirname(__file__)
+sys.path.append(script_dir)
 
 
 class ValidatorBirthday:

@@ -1,17 +1,16 @@
 import logging
-
-from schema import MethodRequest, ClientsInterestsRequest, OnlineScoreRequest
 from http import HTTPStatus
+
+from schema import ClientsInterestsRequest, MethodRequest, OnlineScoreRequest
 from scoring import get_interests, get_score
-# import json
+from validator_birthday import ValidatorBirthday
 from validator_client_ids import ValidatorClientIds
 from validator_date import ValidatorDate
 from validator_email import ValidatorEmail
-from validator_phone import ValidatorPhone
-from validator_birthday import ValidatorBirthday
-from validator_gender import ValidatorGender
 from validator_first_name import ValidatorFirstName
+from validator_gender import ValidatorGender
 from validator_last_name import ValidatorLastName
+from validator_phone import ValidatorPhone
 
 
 class SelectValidator:
@@ -55,7 +54,6 @@ class SelectValidator:
             if i_group:
                 return i_group
         raise ValueError("one of group parameter should exists")
-
 
     @staticmethod
     def _validator_nullable_params(schema, request):
@@ -140,7 +138,8 @@ class SelectValidator:
                                         self.request['body']['arguments'])
         self._validator_nullable_params(schema,
                                         self.request['body']['arguments'])
-        self._validator_group_parameter(schema, self.request['body']['arguments'])
+        self._validator_group_parameter(schema,
+                                        self.request['body']['arguments'])
 
         first_name = None
         last_name = None

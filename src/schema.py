@@ -1,12 +1,13 @@
-from config import Config
-from weakref import WeakKeyDictionary
 from abc import abstractmethod
-from validator_email import ValidatorEmail
-from validator_phone import ValidatorPhone
-from validator_date import ValidatorDate
+from weakref import WeakKeyDictionary
+
+from config import Config
 from validator_birthday import ValidatorBirthday
-from validator_gender import ValidatorGender
 from validator_client_ids import ValidatorClientIds
+from validator_date import ValidatorDate
+from validator_email import ValidatorEmail
+from validator_gender import ValidatorGender
+from validator_phone import ValidatorPhone
 
 
 class ParseSchema(type):

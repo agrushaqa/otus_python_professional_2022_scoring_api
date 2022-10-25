@@ -1,5 +1,28 @@
 # Домашнее задание:
-Scoring API: cоздаем декларативный язык описания и систему валидациизапросов к HTTP API
+Scoring API: cоздаем декларативный язык описания и систему валидации 
+запросов к HTTP API
+
+# Конфигурирование:
+Установить python 3.11
+
+Установить pip
+https://bootstrap.pypa.io/get-pip.py.
+
+    py get-pip.py
+
+# code style
+## isort
+python -m pip install isort
+### run 
+isort .
+## mypy
+python -m pip install mypy
+### run 
+mypy .
+## flake8
+python -m pip install flake8
+### run
+flake8
 
 ## Задание:
     реализовать декларативный язык описания и систему валидациизапросов к HTTP API сервиса скоринга. Шаблон уже есть в api.py, тесты в test.py,функционал подсчета скора в scoring.py. API необычно тем, что пользователидергают методы POST запросами. Чтобы получить результат пользовательотправляет в POST запросе валидный JSON определенного формата на локейшн/method.
