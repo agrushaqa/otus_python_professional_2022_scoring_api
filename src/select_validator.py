@@ -1,6 +1,7 @@
 import logging
 from http import HTTPStatus
 
+from config import Config
 from schema import ClientsInterestsRequest, MethodRequest, OnlineScoreRequest
 from scoring import get_interests, get_score
 from validator_birthday import ValidatorBirthday
@@ -11,7 +12,6 @@ from validator_first_name import ValidatorFirstName
 from validator_gender import ValidatorGender
 from validator_last_name import ValidatorLastName
 from validator_phone import ValidatorPhone
-from config import Config
 
 
 class SelectValidator:
@@ -169,8 +169,8 @@ class SelectValidator:
         if self.request['body']["login"] == Config().admin_login:
             score = 42
         else:
-            score = get_score("store", phone, email, birthday, gender, first_name,
-                          last_name)
+            score = get_score("store", phone, email, birthday, gender,
+                              first_name, last_name)
 
         list_non_empty_params = []
         if 'arguments' in self.request['body']:
