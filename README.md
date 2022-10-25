@@ -147,17 +147,20 @@ http://localhost:8080/method
 
 где token вычисляется следующим образом
 для admin:
+````
     token = hashlib.sha512((datetime.datetime.now()
                         .strftime("%Y%m%d%H")
                         + Config().admin_salt).encode('utf-8')).hexdigest()
 
+````
 в остальных случаях 
+````
     account = "horns&hoofs"
     login = "h&f"
     msg = account + login \
           + Config().salt
     empty_token = hashlib.sha512(msg.encode('utf-8')).hexdigest()
-
+````
 # Замечание 
 В задаче для метода online_score было сказано
     Контекст
