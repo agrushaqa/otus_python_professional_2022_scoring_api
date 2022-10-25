@@ -127,7 +127,7 @@ class TestSuite(unittest.TestCase):
         response, code = self.get_response(request)
         self.assertEqual(HTTPStatus.OK, code)
         score = response.get("score")
-        self.assertEqual(score, 3)
+        self.assertEqual(score, 42)
 
     @cases([
         {},

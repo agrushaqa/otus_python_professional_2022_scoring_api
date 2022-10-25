@@ -11,6 +11,7 @@ from validator_first_name import ValidatorFirstName
 from validator_gender import ValidatorGender
 from validator_last_name import ValidatorLastName
 from validator_phone import ValidatorPhone
+from config import Config
 
 
 class SelectValidator:
@@ -165,7 +166,10 @@ class SelectValidator:
         if 'gender' in self.request['body']['arguments']:
             gender = self.request['body']['arguments']['gender']
             ValidatorGender(gender)
-        score = get_score("store", phone, email, birthday, gender, first_name,
+        if self.request['body']["login"] == Config().admin_login:
+            score = 42
+        else:
+            score = get_score("store", phone, email, birthday, gender, first_name,
                           last_name)
 
         list_non_empty_params = []
