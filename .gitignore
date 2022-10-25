@@ -1,0 +1,4 @@
+reports
+debug_info
+*/__pycache__
+docs
