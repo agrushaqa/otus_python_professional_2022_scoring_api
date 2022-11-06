@@ -4,3 +4,4 @@ debug_info
 docs
 __pycache__
 .coverage
+allure-report

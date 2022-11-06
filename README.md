@@ -24,6 +24,9 @@ python -m pip install flake8
 ### run
 flake8
 
+# allure
+python -m pip install allure-pytest
+
 ## Задание:
 Реализовать декларативный язык описания и систему валидации запросов к HTTP 
 API сервиса скоринга. Шаблон уже есть в api.py, тесты в test.py, функционал 
