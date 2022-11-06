@@ -6,8 +6,6 @@ name: Python application
 on:
   push:
     branches: [ "dz3" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -36,6 +34,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run tests with unittest
       run: |
+        python -m pip install pytest
         python -m pip install --upgrade pip
         pytest
     - name: Install Allure
