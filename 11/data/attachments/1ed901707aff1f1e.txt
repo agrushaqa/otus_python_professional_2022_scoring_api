@@ -1,0 +1,18 @@
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 135, in online_score
+    self._validator_required_params(schema, self.request['body'])
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 131, in _validator_required_params
+    raise ValueError(f"required param {i_param} is absent")
+ValueError: required param arguments is absent
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 135, in online_score
+    self._validator_required_params(schema, self.request['body'])
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 131, in _validator_required_params
+    raise ValueError(f"required param {i_param} is absent")
+ValueError: required param login is absent

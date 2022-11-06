@@ -1,0 +1,6 @@
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'clients_interests', 'arguments': {'client_ids': [1, 2, 3], 'date': '06.11.2022'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'clients_interests', 'arguments': {'client_ids': [1, 2], 'date': '19.07.2017'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'clients_interests', 'arguments': {'client_ids': [0]}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}

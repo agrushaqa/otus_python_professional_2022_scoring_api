@@ -1,0 +1,58 @@
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 189, in clients_interests
+    self._validator_required_params(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 131, in _validator_required_params
+    raise ValueError(f"required param {i_param} is absent")
+ValueError: required param client_ids is absent
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 189, in clients_interests
+    self._validator_required_params(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 131, in _validator_required_params
+    raise ValueError(f"required param {i_param} is absent")
+ValueError: required param client_ids is absent
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 191, in clients_interests
+    self._validator_nullable_params(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 65, in _validator_nullable_params
+    raise ValueError(f"param length {i_param} is 0")
+ValueError: param length client_ids is 0
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 193, in clients_interests
+    ValidatorClientIds(self.request['body']['arguments']['client_ids'])
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_client_ids.py", line 8, in __init__
+    raise TypeError(f"type is {type(value)}")
+TypeError: type is <class 'dict'>
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 193, in clients_interests
+    ValidatorClientIds(self.request['body']['arguments']['client_ids'])
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_client_ids.py", line 11, in __init__
+    raise TypeError(f"value '{i_value} has type {type(i_value)}")
+TypeError: value '1 has type <class 'str'>
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 195, in clients_interests
+    ValidatorDate(self.request['body']['arguments']['date'])
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_date.py", line 6, in __init__
+    self.datetime = datetime.strptime(message, '%d.%m.%Y')
+  File "/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'XXX' does not match format '%d.%m.%Y'

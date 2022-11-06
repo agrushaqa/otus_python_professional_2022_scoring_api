@@ -1,0 +1,14 @@
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': 79175002040, 'email': 'stupnikov@otus.ru'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'gender': 1, 'birthday': '01.01.2000', 'first_name': 'a', 'last_name': 'b'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'gender': 0, 'birthday': '01.01.2000'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'gender': 2, 'birthday': '01.01.2000'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'first_name': 'a', 'last_name': 'b'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': 1, 'birthday': '01.01.2000', 'first_name': 'a', 'last_name': 'b'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}

@@ -1,0 +1,6 @@
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'arguments': {}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'method': 'online_score', 'arguments': {}, 'token': 'dfa91f20aeea47d1febbf0cda7ef148892c54e8f0afc25c46973672d758269dfca0a838df51be41830dc117a2bf233d8a0904a246a983a0233bdfd20e8067392'}, 'headers': {}}

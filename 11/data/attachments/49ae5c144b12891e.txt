@@ -1,0 +1,24 @@
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '89175002040', 'email': 'stupnikov@otus.ru'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikovotus.ru'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': -1}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': '1'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': 1, 'birthday': '01.01.1890'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': 1, 'birthday': 'XXX'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': 1, 'birthday': '01.01.2000', 'first_name': 1}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru', 'gender': 1, 'birthday': '01.01.2000', 'first_name': 's', 'last_name': 2}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'birthday': '01.01.2000', 'first_name': 's'}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}
+request:
+{'body': {'account': 'horns&hoofs', 'login': 'h&f', 'method': 'online_score', 'arguments': {'email': 'stupnikov@otus.ru', 'gender': 1, 'last_name': 2}, 'token': '55cc9ce545bcd144300fe9efc28e65d415b923ebb6be1e19d2750a2c03e80dd209a27954dca045e5bb12418e7d89b6d718a9e35af34e14e1d5bcd5a08f21fc95'}, 'headers': {}}

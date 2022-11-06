@@ -1,0 +1,21 @@
+ERROR    root:parse_request.py:40 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 36, in get
+    self.check_auth()
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 32, in check_auth
+    raise ValueError('invalid token')
+ValueError: invalid token
+ERROR    root:parse_request.py:40 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 36, in get
+    self.check_auth()
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 32, in check_auth
+    raise ValueError('invalid token')
+ValueError: invalid token
+ERROR    root:parse_request.py:40 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 36, in get
+    self.check_auth()
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 32, in check_auth
+    raise ValueError('invalid token')
+ValueError: invalid token

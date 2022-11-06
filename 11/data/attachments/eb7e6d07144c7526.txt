@@ -1,0 +1,112 @@
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 142, in online_score
+    self._validator_group_parameter(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 49, in _validator_group_parameter
+    raise ValueError(f"request {request} is empty")
+ValueError: request {} is empty
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 142, in online_score
+    self._validator_group_parameter(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 51, in _validator_group_parameter
+    raise ValueError("request length < 2")
+ValueError: request length < 2
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 162, in online_score
+    ValidatorPhone(phone)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_phone.py", line 8, in __init__
+    raise ValueError(f"'{self.phone}' invalid first symbol")
+ValueError: '89175002040' invalid first symbol
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 159, in online_score
+    ValidatorEmail(email)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_email.py", line 6, in __init__
+    raise ValueError(self.message)
+ValueError: stupnikovotus.ru
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 168, in online_score
+    ValidatorGender(gender)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_gender.py", line 7, in __init__
+    raise ValueError(f"{self.value} less then 0")
+ValueError: -1 less then 0
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 168, in online_score
+    ValidatorGender(gender)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_gender.py", line 5, in __init__
+    raise ValueError(f"{self.value} type is {type(self.value)}")
+ValueError: 1 type is <class 'str'>
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 165, in online_score
+    ValidatorBirthday(birthday)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_birthday.py", line 14, in __init__
+    raise ValueError("data is too old")
+ValueError: data is too old
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 165, in online_score
+    ValidatorBirthday(birthday)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_birthday.py", line 7, in __init__
+    self.datetime = datetime.datetime.strptime(message, '%d.%m.%Y')
+  File "/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'XXX' does not match format '%d.%m.%Y'
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 153, in online_score
+    ValidatorFirstName(first_name)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_first_name.py", line 5, in __init__
+    raise ValueError(f"{self.value} type is {type(self.value)}")
+ValueError: 1 type is <class 'int'>
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 156, in online_score
+    ValidatorLastName(last_name)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/validator_last_name.py", line 5, in __init__
+    raise ValueError(f"{self.value} type is {type(self.value)}")
+ValueError: 2 type is <class 'int'>
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 142, in online_score
+    self._validator_group_parameter(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 57, in _validator_group_parameter
+    raise ValueError("one of group parameter should exists")
+ValueError: one of group parameter should exists
+ERROR    root:parse_request.py:50 exception:
+Traceback (most recent call last):
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/parse_request.py", line 45, in get
+    info = getattr(validator, method)(context, store)
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 142, in online_score
+    self._validator_group_parameter(schema,
+  File "/home/runner/work/otus_python_professional_2022_scoring_api/otus_python_professional_2022_scoring_api/tests/../src/select_validator.py", line 57, in _validator_group_parameter
+    raise ValueError("one of group parameter should exists")
+ValueError: one of group parameter should exists
