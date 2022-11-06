@@ -29,7 +29,11 @@ python -m pip install black
 black .
 ## pylint
 python -m pip install pylint
-
+## autopep8
+python -m pip install autopep8
+##
+python -m pip install pep8 
+python -m pip install --upgrade autopep8
 
 # allure
 python -m pip install allure-pytest
