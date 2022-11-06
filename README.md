@@ -23,6 +23,13 @@ mypy .
 python -m pip install flake8
 ### run
 flake8
+## black
+python -m pip install black
+## run 
+black .
+## pylint
+python -m pip install pylint
+
 
 # allure
 python -m pip install allure-pytest

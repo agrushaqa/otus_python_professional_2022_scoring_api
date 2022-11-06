@@ -30,8 +30,9 @@ jobs:
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
-          black: true
           flake8: true
+          mypy: true
+          autopep8: true
   build:
 
     runs-on: ubuntu-latest
