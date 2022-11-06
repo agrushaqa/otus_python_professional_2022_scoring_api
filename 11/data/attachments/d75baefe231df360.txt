@@ -1,2 +1,0 @@
-request:
-{'body': {'account': 'horns&hoofs', 'login': 'admin', 'method': 'online_score', 'arguments': {'phone': '79175002040', 'email': 'stupnikov@otus.ru'}, 'token': '15aea563b1566ae6f477ab13c676947de53a809b74522a5e5bcad7418a5a4cc50629ba2d19706cecae19c1d263402fc57154640183e022f9e0c4cfcefb9f23a8'}, 'headers': {}}
