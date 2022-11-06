@@ -1,4 +1,5 @@
 import unittest
+
 from ..src.validator_email import ValidatorEmail
 
 

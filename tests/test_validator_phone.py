@@ -1,5 +1,6 @@
-from ..src.validator_phone import ValidatorPhone
 import unittest
+
+from ..src.validator_phone import ValidatorPhone
 
 
 class TestValidatorEmail(unittest.TestCase):

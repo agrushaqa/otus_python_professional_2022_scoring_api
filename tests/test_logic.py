@@ -1,11 +1,10 @@
 import datetime
 import functools
 import hashlib
-import unittest
-from http import HTTPStatus
-
 import os
 import sys
+import unittest
+from http import HTTPStatus
 
 script_dir = os.path.join(os.path.dirname(__file__), "..", "src")
 sys.path.append(script_dir)
