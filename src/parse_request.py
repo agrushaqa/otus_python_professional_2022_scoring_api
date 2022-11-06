@@ -11,7 +11,6 @@ class ParseRequest:
     def __init__(self, request):
         self.request = request
         self.method = None
-        self.validation_failed_code = HTTPStatus.UNPROCESSABLE_ENTITY
         self.code = None
         self.response = None
 
@@ -32,28 +31,7 @@ class ParseRequest:
         if token != request.get("token"):
             raise ValueError('invalid token')
 
-    def _get_method(self):
-        logging.info("start method_handler")
-        if 'body' in self.request.keys() is False:
-            raise ValueError('body is absent')
-        logging.info("request type:")
-        logging.info(type(self.request))
-        logging.info(self.request)
-        logging.info("body:")
-        logging.info(self.request['body'])
-        if 'method' in self.request['body'].keys() is False:
-            raise ValueError('method is absent')
-        self.method = self.request['body']['method']
-        logging.info("finish method_handler")
-
-    def get(self):
-        try:
-            self._get_method()
-        except Exception as e:
-            self.code = self.validation_failed_code
-            self.response = str(e)
-            return self.response, self.code
-
+    def get(self, method, context, store):
         try:
             self.check_auth()
         except Exception:
@@ -64,9 +42,9 @@ class ParseRequest:
 
         try:
             validator = SelectValidator(self.request)
-            info = getattr(validator, self.method)()
+            info = getattr(validator, method)(context, store)
         except Exception as e:
-            self.code = self.validation_failed_code
+            self.code = Config().validation_failed_code
             self.response = str(e)
             info = self.response, self.code
             logging.exception("exception:")

@@ -130,7 +130,7 @@ class SelectValidator:
                     if i_param not in request.keys():
                         raise ValueError(f"required param {i_param} is absent")
 
-    def online_score(self):
+    def online_score(self, context, store):
         schema = MethodRequest()
         self._validator_required_params(schema, self.request['body'])
         self._validator_nullable_params(schema, self.request['body'])
@@ -176,11 +176,12 @@ class SelectValidator:
         if 'arguments' in self.request['body']:
             list_non_empty_params = sorted(self.list_non_empty_params(
                 self.request['body']['arguments']))
+        context["has"] = list_non_empty_params
         return {'score': score,
-                'non_empty_params': list_non_empty_params
+                'has': context["has"]
                 }, HTTPStatus.OK
 
-    def clients_interests(self):
+    def clients_interests(self, context, store):
         schema = MethodRequest()
         self._validator_required_params(schema, self.request['body'])
         self._validator_nullable_params(schema, self.request['body'])

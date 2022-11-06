@@ -26,12 +26,34 @@ def check_auth(request):
     return False
 
 
+def _get_method(request):
+    logging.info("start method_handler")
+    if 'body' in request.keys() is False:
+        raise ValueError('body is absent')
+    logging.info("request type:")
+    logging.info(type(request))
+    logging.info(request)
+    logging.info("body:")
+    logging.info(request['body'])
+    if 'method' in request['body'].keys() is False:
+        raise ValueError('method is absent')
+    logging.info("finish method_handler")
+    return request['body']['method']
+
+
 def method_handler(request, ctx, store):
     logging.info("start method_handler")
     print("request:")
     print(request)
+    try:
+        method = _get_method(request)
+    except Exception as e:
+        code = Config().validation_failed_code
+        response = str(e)
+        return response, code
+
     parser = ParseRequest(request)
-    return parser.get()
+    return parser.get(method, ctx, store)
 
 
 class MainHTTPHandler(BaseHTTPRequestHandler):

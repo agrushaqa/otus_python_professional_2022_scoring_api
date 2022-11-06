@@ -6,6 +6,7 @@ class Config:
         self.salt = "Otus"
         self.admin_login = "admin"
         self.admin_salt = "42"
+        self.validation_failed_code = HTTPStatus.UNPROCESSABLE_ENTITY
         self.errors = {
             HTTPStatus.BAD_REQUEST: "Bad Request",
             HTTPStatus.FORBIDDEN: "Forbidden",

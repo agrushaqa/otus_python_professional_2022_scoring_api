@@ -12,14 +12,14 @@ class TestValidatorClientIds(unittest.TestCase):
             ValidatorClientIds(["1", "2"])
 
     def test_list(self):
-         ValidatorClientIds([1, 2])
+        ValidatorClientIds([1, 2])
 
     def test_tuple(self):
         with self.assertRaises(Exception):
             ValidatorClientIds((1, 2))
 
-    def test_tuple(self):
-         ValidatorClientIds([])
+    def test_empty_list(self):
+        ValidatorClientIds([])
 
     def test_invalid_client_ids_number(self):
         with self.assertRaises(Exception):

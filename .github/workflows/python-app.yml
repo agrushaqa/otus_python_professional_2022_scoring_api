@@ -1,0 +1,78 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [ "dz3" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Run tests with behave
+      run: |
+        python -m pip install --upgrade pip
+        python -m unittest discover -s tests -p "*" -v -b
+    - name: Install Allure
+      run: |
+        sudo apt-get update 
+        sudo apt-get install allure
+    - uses: simple-elf/allure-report-action@master
+      if: always()
+      id: allure-report
+      continue-on-error: true
+      with:
+        allure_results: report
+        gh_pages: gh-pages
+        allure_report: allure-report
+        allure_history: allure-history
+    - name: Deploy allure report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history
+    - name: Generate build number
+      uses: einaregilsson/build-number@v3
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}   
+    - name: Print github variables
+      run: |
+                  echo "BUILD_NUMBER is $BUILD_NUMBER"
+                  echo "GITHUB_RUN_NUMBER: ${GITHUB_RUN_NUMBER}"
+                  echo "Deploying to production server on branch $GITHUB_REF"
+    - name: Post the link to the allure report
+      if: always()
+      uses: Sibz/github-status-action@v1
+      with: 
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: 'Test report'
+          state: 'success'
+          sha: ${{ github.event.pull_request.head.sha || github.sha}}
+          target_url: https://agrushaqa.github.io/otus_python_professional_2022_scoring_api/${GITHUB_RUN_NUMBER}

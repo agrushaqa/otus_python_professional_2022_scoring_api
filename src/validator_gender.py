@@ -7,4 +7,3 @@ class ValidatorGender:
             raise ValueError(f"{self.value} less then 0")
         if self.value > 2:
             raise ValueError(f"{self.value} more then 2")
-

@@ -4,13 +4,13 @@ from ..src.validator_gender import ValidatorGender
 
 class TestValidatorGender(unittest.TestCase):
     def test_simple_gender_0(self):
-         ValidatorGender("0")
+        ValidatorGender(0)
 
     def test_simple_gender_1(self):
-         ValidatorGender("1")
+        ValidatorGender(1)
 
     def test_simple_gender_2(self):
-         ValidatorGender("2")
+        ValidatorGender(2)
 
     def test_invalid_gender_not_number(self):
         with self.assertRaises(Exception):

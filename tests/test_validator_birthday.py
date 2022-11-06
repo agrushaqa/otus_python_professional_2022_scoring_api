@@ -4,7 +4,7 @@ from ..src.validator_birthday import ValidatorBirthday
 
 class TestValidatorDate(unittest.TestCase):
     def test_simple_date(self):
-         ValidatorBirthday("01.12.2001")
+        ValidatorBirthday("01.12.2001")
 
     def test_invalid_date_without_point(self):
         with self.assertRaises(Exception):

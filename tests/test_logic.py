@@ -4,7 +4,14 @@ import hashlib
 import unittest
 from http import HTTPStatus
 
-import api
+import os
+import sys
+
+script_dir = os.path.join(os.path.dirname(__file__), "..", "src")
+sys.path.append(script_dir)
+print(script_dir)
+
+from api import method_handler
 from config import Config
 
 
@@ -15,7 +22,9 @@ def cases(cases):
             for c in cases:
                 new_args = args + (c if isinstance(c, tuple) else (c,))
                 f(*new_args)
+
         return wrapper
+
     return decorator
 
 
@@ -26,14 +35,14 @@ class TestSuite(unittest.TestCase):
         self.settings = {}
 
     def get_response(self, request):
-        return api.method_handler({"body": request, "headers": self.headers},
-                                  self.context, self.settings)
+        return method_handler({"body": request, "headers": self.headers},
+                              self.context, self.settings)
 
     def set_valid_auth(self, request):
         if request.get("login") == Config().admin_login:
             request["token"] = hashlib.sha512((datetime.datetime.now()
-                                              .strftime("%Y%m%d%H")
-                                              + Config(
+                                               .strftime("%Y%m%d%H")
+                                               + Config(
 
                     ).admin_salt).encode('utf-8')).hexdigest()
         else:
@@ -116,7 +125,6 @@ class TestSuite(unittest.TestCase):
         score = response.get("score")
         self.assertTrue(isinstance(score, (int, float)) and score >= 0,
                         arguments)
-        self.context["has"] = response.get("non_empty_params")
         self.assertEqual(sorted(self.context["has"]), sorted(arguments.keys()))
 
     def test_ok_score_admin_request(self):
@@ -160,7 +168,7 @@ class TestSuite(unittest.TestCase):
         self.assertEqual(len(arguments["client_ids"]), len(response))
         self.assertTrue(all(v and isinstance(v, list) and
                             all(isinstance(i, str) for i in v)
-                        for v in response.values()))
+                            for v in response.values()))
         self.context["nclients"] = len(response.values())
         self.assertEqual(self.context.get("nclients"),
                          len(arguments["client_ids"]))
