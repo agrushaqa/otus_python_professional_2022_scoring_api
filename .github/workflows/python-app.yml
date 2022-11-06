@@ -42,7 +42,7 @@ jobs:
         python -m pip install pytest
         python -m pip install --upgrade pip
         python -m pip install allure-pytest
-        pytest --alluredir=allure-report/
+        pytest --alluredir=report/
     - uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
